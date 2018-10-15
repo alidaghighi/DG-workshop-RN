@@ -60,3 +60,15 @@ export default class RepositoryItem extends React.PureComponent {
     );
   }
 }
+
+RepositoryItem.defaultProps = {
+  name:null,
+  description:null,
+  price:null,
+  id:null,
+  avatarUrl:null,
+  available:null,
+  url:null,
+  onPress:null,
+  addToCart:null
+};

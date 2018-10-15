@@ -26,34 +26,48 @@ export default class Header extends React.Component {
 
     return (
       <View style={styles.container}>
-        {
-        //   searchVisibility ? (
-        //     <View>
-        //       <TextInput
-        //         value={text}
-        //         placeholder="عبارت جستجو را وارد کنید ..."
-        //         style={styles.input}
-        //         onChangeText={txt => this.setState({ text: txt })}
-        //         onSubmitEditing={this.submitSearch}
-        //       />
-        //     </View>
-        //   ) : (
-        //     <View style={styles.titleWrapper}>
-        //       <Text style={styles.action}>منو</Text>
-        //       <Text style={styles.title}>
-        //         {`${query}`}
-        //       </Text>
-        //       <TouchableOpacity
-        //         style={styles.action}
-        //         onPress={() => {
-        //           this.setState({ searchVisibility: true });
-        //         }}
-        //       >
-        //         <Text>جستجو</Text>
-        //       </TouchableOpacity>
-        //     </View>
-        //   )
-        }
+        
+          {/* searchVisibility ? (
+            <View>
+              <TextInput
+                value={text}
+                placeholder="عبارت جستجو را وارد کنید ..."
+                style={styles.input}
+                onChangeText={txt => this.setState({ text: txt })}
+                onSubmitEditing={this.submitSearch}
+              />
+            </View>
+          ) : (
+            <View style={styles.titleWrapper}>
+              <Text style={styles.action}>منو</Text>
+              <Text style={styles.title}>
+                {`${query}`}
+              </Text>
+              <TouchableOpacity
+                style={styles.action}
+                onPress={() => {
+                  this.setState({ searchVisibility: true });
+                }}
+              >
+                <Text>جستجو</Text>
+              </TouchableOpacity>
+            </View>
+          ) */}
+          <View style={styles.titleWrapper}>
+              <Text style={styles.action}>منو</Text>
+              <Text style={styles.title}>
+                {`${query}`}
+              </Text>
+              <TouchableOpacity
+                style={styles.action}
+                onPress={() => {
+                  this.props.submitCart
+                }}
+              >
+                <Text>سبد خرید</Text>
+              </TouchableOpacity>
+            </View>
+        
       </View>
     );
   }
